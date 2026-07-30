@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.marcopolo.dev/trust
+provider: marco-polo
+legal_entity: Immersa
+trust_page: https://www.marcopolo.dev/trust
+certifications:
+- name: SOC 2 Type II
+  status: certified
+  availability: Compliance report available on request under NDA
+compliance_programs:
+- Attribute-based access controls with least-privilege
+- Annual third-party penetration testing
+- Continuous monitoring of 100+ internal security controls
+- Mandatory employee security-awareness training
+- Manual and automated vulnerability scanning in the development lifecycle
+encryption:
+  in_transit: TLS
+  at_rest: AES-256
+data_handling: >-
+  Accesses only the data needed and stores it temporarily for no longer than
+  needed; sandboxed execution hosted in the customer's cloud.
+cloud_infrastructure:
+- Google Cloud
+- Microsoft Azure
+- Amazon Web Services
+status_page: none-found

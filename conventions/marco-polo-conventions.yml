@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.marcopolo.dev + https://mcp.marcopolo.dev/.well-known/*
+provider: marco-polo
+summary: >-
+  MarcoPolo's integration surface is a hosted MCP server, not a REST API, so its
+  cross-cutting semantics are MCP-tool-centric. Captured below are the conventions
+  that are actually published; unpublished areas are marked none-found rather than
+  guessed.
+authentication:
+  style: oauth2-bearer
+  detail: OAuth 2.0 (authorization-code + PKCE, device-code) via WorkOS AuthKit; bearer token in Authorization header. See authentication/marco-polo-authentication.yml.
+transport:
+  protocol: MCP over streamable HTTP
+  endpoint: https://mcp.marcopolo.dev
+execution_model: >-
+  Agent inspects a connection's metadata, writes a query file into the sandboxed
+  workspace, executes it, and caches the full result set in DuckDB before
+  answering. Results persist in the workspace for iterative analysis.
+idempotency: none-found
+pagination: none-found
+versioning: none-found
+error_envelope: none-found
+rate_limiting: none-found
+governance:
+  cost_plane: Token-usage visibility and model routing optimization.
+  data_minimization: Accesses only needed data; stores temporarily; least-privilege ABAC.
+cross_links:
+  authentication: authentication/marco-polo-authentication.yml
+  mcp: mcp/marco-polo-mcp.yml
+  security: security/marco-polo-domain-security.yml

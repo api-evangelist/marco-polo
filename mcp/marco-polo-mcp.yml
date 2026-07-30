@@ -1,0 +1,66 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.marcopolo.dev/getting-started + live probe of https://mcp.marcopolo.dev
+name: MarcoPolo MCP Server
+description: >-
+  MarcoPolo is an MCP-first enterprise AI data platform. Its product surface IS a
+  hosted, remote MCP server that lets any MCP client (Claude, ChatGPT, Cursor,
+  Codex, or a custom agent) connect governed enterprise data sources into a
+  sandboxed workspace, run queries, and cache results in DuckDB - "without the
+  leaks." Operated by Immersa.
+endpoint: https://mcp.marcopolo.dev
+transport: streamable-http
+hosting: hosted-remote
+status: live
+status_evidence: 'GET https://mcp.marcopolo.dev returns 401 (bearer token required)'
+authentication:
+  type: oauth2
+  flow: authorization_code+pkce
+  authorization_server: https://appealing-lion-77-staging.authkit.app
+  metadata:
+  - https://mcp.marcopolo.dev/.well-known/oauth-authorization-server
+  - https://mcp.marcopolo.dev/.well-known/oauth-protected-resource
+  identity_providers:
+  - Google
+  - Microsoft
+  - GitHub
+  - Email
+  notes: >-
+    Backed by WorkOS AuthKit. Protected-resource metadata (RFC 9728) points MCP
+    clients at the AuthKit authorization server; bearer token passed in the
+    Authorization header.
+tools:
+- name: install_demo_connection
+  description: Deploy demo datasets so a client can begin querying immediately.
+  status: documented
+- name: connection_list
+  description: Enumerate the data-source connections available to the workspace.
+  status: documented
+- name: connection_describe
+  description: Inspect a connection's table/schema metadata.
+  status: documented
+- name: connection_query
+  description: Execute a query file against a data source; full result cached in DuckDB.
+  status: documented
+- name: workspace_shell
+  description: Run CLI commands within the sandboxed workspace.
+  status: documented
+- name: connection_setup
+  description: Generate a secure credential-configuration link for a new connection.
+  status: documented
+data_sources:
+- PostgreSQL
+- Snowflake
+- BigQuery
+- Amazon S3
+- OneDrive
+- Salesforce
+- Jira
+- DuckDB (local)
+clients:
+- Claude (plugin)
+- Codex (plugin)
+- ChatGPT
+- Cursor
+- Custom MCP agents
+docs: https://docs.marcopolo.dev/getting-started

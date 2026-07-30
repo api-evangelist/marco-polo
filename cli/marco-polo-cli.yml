@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.marcopolo.dev + https://docs.marcopolo.dev/getting-started
+name: connection
+summary: >-
+  MarcoPolo exposes a `connection` command surface that AI agents drive inside the
+  sandboxed MarcoPolo workspace (via the workspace_shell MCP tool) to enumerate,
+  inspect, and query governed data-source connections. It is a workspace-resident
+  CLI rather than a package a user installs locally; access is mediated by the
+  hosted MCP server.
+install:
+- method: mcp-workspace
+  detail: Available inside the MarcoPolo sandboxed workspace once an MCP client is connected to https://mcp.marcopolo.dev; no separate install of npm/brew/pip is documented.
+commands:
+- name: connection list
+  flags:
+  - --json
+  description: List available data-source connections.
+- name: connection describe
+  args:
+  - source
+  flags:
+  - --json
+  description: Inspect the schema/metadata of a connection.
+- name: connection query
+  args:
+  - source
+  flags:
+  - --file <path>
+  - --json
+  description: Execute a query file against a data source; result cached in DuckDB.
+docs: https://docs.marcopolo.dev/getting-started

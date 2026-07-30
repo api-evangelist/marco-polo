@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: probed
+source: live HTTP probes of marco-polo hosts (2026-07-20)
+provider: marco-polo
+probes:
+- host: mcp.marcopolo.dev
+  path: /.well-known/oauth-authorization-server
+  status: 200
+  file: well-known/marco-polo-oauth-authorization-server.json
+  note: RFC 8414 Authorization Server Metadata (WorkOS AuthKit).
+- host: mcp.marcopolo.dev
+  path: /.well-known/oauth-protected-resource
+  status: 200
+  file: well-known/marco-polo-oauth-protected-resource.json
+  note: RFC 9728 Protected Resource Metadata for the MCP server.
+- host: marcopolo.dev
+  path: /.well-known/security.txt
+  status: 404
+- host: marcopolo.dev
+  path: /.well-known/openid-configuration
+  status: 404
+- host: marcopolo.dev
+  path: /.well-known/oauth-authorization-server
+  status: 404
+- host: marcopolo.dev
+  path: /.well-known/api-catalog
+  status: 404
+- host: marcopolo.dev
+  path: /.well-known/ai-plugin.json
+  status: 404
+- host: docs.marcopolo.dev
+  path: /.well-known/security.txt
+  status: 403
+  note: docs host blocks non-browser user agents.
