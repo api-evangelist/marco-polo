@@ -11,7 +11,8 @@ description: >-
 endpoint: https://mcp.marcopolo.dev
 transport: streamable-http
 hosting: hosted-remote
-status: live
+status: published
+status_raw: live
 status_evidence: 'GET https://mcp.marcopolo.dev returns 401 (bearer token required)'
 authentication:
   type: oauth2
