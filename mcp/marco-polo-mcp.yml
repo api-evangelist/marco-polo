@@ -2,18 +2,16 @@ generated: '2026-07-20'
 method: searched
 source: https://docs.marcopolo.dev/getting-started + live probe of https://mcp.marcopolo.dev
 name: MarcoPolo MCP Server
-description: >-
-  MarcoPolo is an MCP-first enterprise AI data platform. Its product surface IS a
-  hosted, remote MCP server that lets any MCP client (Claude, ChatGPT, Cursor,
-  Codex, or a custom agent) connect governed enterprise data sources into a
-  sandboxed workspace, run queries, and cache results in DuckDB - "without the
-  leaks." Operated by Immersa.
+description: MarcoPolo is an MCP-first enterprise AI data platform. Its product surface IS a hosted, remote
+  MCP server that lets any MCP client (Claude, ChatGPT, Cursor, Codex, or a custom agent) connect governed
+  enterprise data sources into a sandboxed workspace, run queries, and cache results in DuckDB - "without
+  the leaks." Operated by Immersa.
 endpoint: https://mcp.marcopolo.dev
 transport: streamable-http
 hosting: hosted-remote
 status: published
 status_raw: live
-status_evidence: 'GET https://mcp.marcopolo.dev returns 401 (bearer token required)'
+status_evidence: GET https://mcp.marcopolo.dev returns 401 (bearer token required)
 authentication:
   type: oauth2
   flow: authorization_code+pkce
@@ -26,10 +24,8 @@ authentication:
   - Microsoft
   - GitHub
   - Email
-  notes: >-
-    Backed by WorkOS AuthKit. Protected-resource metadata (RFC 9728) points MCP
-    clients at the AuthKit authorization server; bearer token passed in the
-    Authorization header.
+  notes: Backed by WorkOS AuthKit. Protected-resource metadata (RFC 9728) points MCP clients at the AuthKit
+    authorization server; bearer token passed in the Authorization header.
 tools:
 - name: install_demo_connection
   description: Deploy demo datasets so a client can begin querying immediately.
@@ -65,3 +61,9 @@ clients:
 - Cursor
 - Custom MCP agents
 docs: https://docs.marcopolo.dev/getting-started
+deployment:
+  mode: remote
+  verified: searched
+  tools: 6
+  checked: '2026-08-12'
+  source: catalog MCP census
