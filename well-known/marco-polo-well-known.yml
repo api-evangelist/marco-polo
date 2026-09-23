@@ -32,3 +32,21 @@ probes:
   path: /.well-known/security.txt
   status: 403
   note: docs host blocks non-browser user agents.
+hosts:
+- host: ''
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: marco-polo-oauth-authorization-server.json
+    note: RFC 8414 Authorization Server Metadata (WorkOS AuthKit).
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: marco-polo-oauth-protected-resource.json
+    note: RFC 9728 Protected Resource Metadata for the MCP server.
+x-shape-fix:
+  converted: '2026-08-20'
+  from: probes
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent. Promoted ONLY the 2xx rows out of
+    the probe log; non-2xx probes are real negative results and were left in place, not converted into
+    documents.
