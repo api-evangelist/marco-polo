@@ -64,6 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Marco Polo is a company surfaced as a portfolio company of mayfield, uncork-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+MarcoPolo is an MCP-first enterprise AI data platform operated by Immersa - "Scale AI across the enterprise. Without the leaks." It exposes a hosted, remote Model Context Protocol (MCP) server that lets any AI assistant (Claude, ChatGPT, Cursor, Codex, or a custom agent) connect governed enterprise data sources - PostgreSQL, Snowflake, BigQuery, S3, OneDrive, Salesforce, Jira and local DuckDB - into a sandboxed workspace, run queries, and cache results, with centralized credential management, attribute-based access controls, token cost visibility, and SOC 2 Type II governance. Originally added to the API Evangelist network as a venture-portfolio lead and enriched from its public site, docs, and live MCP probes.
 
-Backed by: mayfield, uncork-capital — https://marcopolo.dev
+**Areas:** Company · MCP · Enterprise AI · Data Governance · AI Agents · Data Integration · Security · Authentication
+
+## Marco Polo on APIs.io
+
+Everything profiled for Marco Polo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/marco-polo/](https://apis.io/providers/marco-polo/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [MarcoPolo MCP Server](https://apis.io/apis/marco-polo/marcopolo-mcp-server/) — Hosted, remote Model Context Protocol server that connects governed enterprise data sources into a sandboxed agent workspace. OAuth 2.0 (WorkOS AuthKit)…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [MarcoPolo MCP Server](https://apis.io/servers/marco-polo/marcopolo-mcp-server/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Marco Polo Authentication](https://apis.io/security/marco-polo/marco-polo-authentication/)
+- [Marco Polo Domain Security](https://apis.io/security/marco-polo/marco-polo-domain-security/)
+- [Marco Polo Trust Center](https://apis.io/security/marco-polo/marco-polo-trust-center/)
+- [Marco Polo Vulnerability Disclosure](https://apis.io/security/marco-polo/marco-polo-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Marco Polo Scopes](https://apis.io/scopes/marco-polo/marco-polo-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://marcopolo.dev)
+- [Documentation](https://docs.marcopolo.dev)
+- [Getting started](https://docs.marcopolo.dev/getting-started)
+- [Pricing](https://www.marcopolo.dev/pricing)
+- [Blog](https://www.marcopolo.dev/resources)
+
+## API Evangelist rating
+
+**Kin Score 27.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 26.3 |
+
+**Agent readiness 22.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 37.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/marco-polo/](https://apis.io/providers/marco-polo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Marco Polo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/marco-polo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
